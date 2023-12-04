@@ -1,5 +1,5 @@
 <?php
-$connections = mysqli_connect ("localhost","root","","db_act2d");
+$connections = mysqli_connect ("localhost","root","","kainasal");
 
 	if (mysqli_connect_error())
 	{
