@@ -1,6 +1,6 @@
 <?php
 // Establish a connection to your MySQL database
-$servername = "localhost";
+$servername = "localhost";  
 $username = "root";
 $password = "";
 $database = "kainasal";
