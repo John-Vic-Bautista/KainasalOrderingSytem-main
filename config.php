@@ -14,9 +14,9 @@ if ($conn->connect_error) {
 
 // SQL query to join the four tables
 $sql = "SELECT * FROM Admin 
-        JOIN Menu ON Admin.admin_id = Menu.admin_id
-        JOIN Delivery ON Admin.admin_id = Delivery.admin_id
-        JOIN OrderDetails ON Admin.admin_id = OrderDetails.admin_id";
+        JOIN Menu ON Admin.StaffID = Menu.StaffID
+        JOIN Delivery ON Admin.StaffID = User.StaffID
+        JOIN OrderDetails ON Admin.StaffID = OrderDetails.StaffID";
 
 $result = $conn->query($sql);
 
@@ -25,11 +25,11 @@ if ($result->num_rows > 0) {
         // Access data from the joined tables
         $adminData = $row['column_name_in_Admin'];
         $menuData = $row['column_name_in_Menu'];
-        $deliveryData = $row['column_name_in_Delivery'];
+        $UserData = $row['column_name_in_User'];
         $orderDetailsData = $row['column_name_in_OrderDetails'];
 
         // Process and display the data as needed
-        echo "Admin Data: $adminData, Menu Data: $menuData, Delivery Data: $deliveryData, OrderDetails Data: $orderDetailsData<br>";
+        echo "Admin Data: $adminData, Menu Data: $menuData, User Data: $UserData, OrderDetails Data: $orderDetailsData<br>";
     }
 } else {
     echo "No results found.";

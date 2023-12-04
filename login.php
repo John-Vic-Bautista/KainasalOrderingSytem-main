@@ -1,8 +1,8 @@
 <?php
 // Establish a connection to your MySQL database
-$servername = "your_servername";
-$username = "your_username";
-$password = "your_password";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $database = "kainasal";
 
 $conn = new mysqli($servername, $username, $password, $database);
