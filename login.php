@@ -17,7 +17,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Validate user credentials (You should compare hashed passwords in a real scenario)
-$sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+$sql = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
 $result = $conn->query($sql);
 
