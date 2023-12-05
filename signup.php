@@ -5,6 +5,8 @@ $username = "your_username";
 $password = "your_password";
 $database = "kainasal";
 
+include("config.php");
+
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
